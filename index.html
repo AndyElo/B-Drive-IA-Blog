@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B drive | Transformación Tecnológica</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>B drive | Centro de Innovación y Ciberseguridad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #0a0b10;
@@ -19,10 +19,9 @@
             color: var(--text-white);
             font-family: 'Montserrat', sans-serif;
             margin: 0;
-            padding: 0;
+            line-height: 1.6;
         }
 
-        /* Navegación Estilo B drive */
         nav {
             display: flex;
             justify-content: space-between;
@@ -32,122 +31,111 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid #1a1c2e;
         }
 
-        .logo img { height: 32px; }
+        .logo img { height: 30px; }
 
         .nav-links a {
             color: white;
             text-decoration: none;
             margin-left: 30px;
-            font-size: 15px;
+            font-size: 14px;
+            font-weight: 600;
         }
 
-        /* HERO IDENTICO A bdrive.ai */
+        /* HERO CLONADO */
         .hero {
-            min-height: 75vh;
+            min-height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 0 8%;
-            max-width: 1200px;
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 700;
             line-height: 1.1;
-            margin: 0 0 35px 0;
+            margin-bottom: 30px;
             letter-spacing: -2px;
         }
 
-        .hero h1 span {
-            font-style: italic;
-            font-weight: 400;
-        }
+        .hero h1 span { font-style: italic; font-weight: 400; }
 
         .hero p {
-            font-size: 1.15rem;
-            line-height: 1.6;
-            max-width: 750px;
+            font-size: 1.1rem;
+            max-width: 700px;
             color: #d1d1d1;
             margin: 0;
         }
 
-        /* Contenedor del Blog y Cards */
-        .content-wrapper {
-            background: linear-gradient(180deg, #0a0b10 0%, #161826 100%);
-            padding: 60px 8%;
+        /* SECCIONES DE CONTENIDO */
+        .section-container { padding: 60px 8%; }
+        
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent-blue);
+            padding-left: 20px;
         }
 
-        .container {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 60px;
+            gap: 30px;
         }
 
+        /* CARDS */
         .card {
             background: var(--card-bg);
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
             border: 1px solid #1f2133;
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
 
         .card:hover { border-color: var(--accent-blue); transform: translateY(-5px); }
 
-        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
 
         .card-body { padding: 25px; }
 
-        .tag { color: var(--accent-blue); font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 10px; display: block; font-family: 'Inter', sans-serif; }
+        .tag {
+            color: var(--accent-blue);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 10px;
+        }
 
-        .btn-link {
+        .btn-action {
             display: inline-block;
             margin-top: 15px;
             color: white;
             text-decoration: none;
             border: 1px solid var(--accent-blue);
-            padding: 8px 18px;
-            border-radius: 4px;
+            padding: 10px 20px;
+            border-radius: 5px;
             font-size: 13px;
             font-weight: 600;
         }
 
-        /* SECCIÓN ESTADÍSTICAS RECOMENDADA */
-        .stats-box {
-            margin: 60px auto;
-            padding: 40px;
-            background: #11121d;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid #1f2133;
+        /* STATS */
+        .stats-strip {
+            background: linear-gradient(90deg, #001a4d, #000);
+            padding: 50px 8%;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
-            gap: 20px;
+            text-align: center;
         }
 
-        .stat-item h3 { font-size: 2.5rem; margin: 0; color: var(--text-white); }
-        .stat-item p { color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase; margin: 5px 0 0; }
+        .stat-item h2 { font-size: 3rem; margin: 0; color: var(--accent-blue); }
+        .stat-item p { font-size: 0.9rem; color: var(--text-dim); text-transform: uppercase; }
 
-        /* SECCIÓN VIDEOS RECOMENDADA */
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-
-        .video-card {
-            background: #11121d;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #1f2133;
-        }
-
-        footer { text-align: center; padding: 60px; color: #444; font-size: 0.8rem; border-top: 1px solid #1a1c2e; }
+        footer { text-align: center; padding: 40px; border-top: 1px solid #1a1c2e; color: #555; font-size: 13px; }
     </style>
 </head>
 <body>
@@ -156,34 +144,42 @@
         <div class="logo"><img src="img/logo.png" alt="B drive"></div>
         <div class="nav-links">
             <a href="index.html">Inicio</a>
-            <a href="#" style="color: var(--accent-blue);">Insights</a>
+            <a href="articulo1.html">Seguridad</a>
+            <a href="articulo2.html">IA</a>
         </div>
     </nav>
 
     <header class="hero">
         <h1>Impulsando la transformación <span>tecnológica</span></h1>
-        <p>Diseñamos, implementamos y gestionamos soluciones tecnológicas que impulsan la innovación, el crecimiento de tu organización y hacen posible lo imposible.</p>
+        <p>Diseñamos, implementamos y gestionamos soluciones tecnológicas que impulsan la innovación y la protección de datos a nivel global.</p>
     </header>
 
-    <div class="content-wrapper">
-        <h2 style="margin-bottom: 40px; font-weight: 700;">Tech Insights & Blog</h2>
-        
-        <div class="container">
+    <section class="stats-strip">
+        <div class="stat-item"><h2>99.9%</h2><p>Uptime Crítico</p></div>
+        <div class="stat-item"><h2>24/7</h2><p>Monitoreo SOC</p></div>
+        <div class="stat-item"><h2>15ms</h2><p>Latencia de Red</p></div>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">Tech Insights</h2>
+        <div class="grid">
             <article class="card">
                 <img src="img/about.png">
                 <div class="card-body">
                     <span class="tag">Ciberseguridad</span>
-                    <h3 style="margin:0;">Blindaje de Datos</h3>
-                    <a href="articulo1.html" class="btn-link">Leer Artículo</a>
+                    <h3>Estrategias de Blindaje 2026</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Cómo proteger infraestructuras críticas ante ataques de nueva generación.</p>
+                    <a href="articulo1.html" class="btn-action">Leer Artículo</a>
                 </div>
             </article>
 
             <article class="card">
                 <img src="img/hero2-img.png">
                 <div class="card-body">
-                    <span class="tag">IA & Analítica</span>
-                    <h3 style="margin:0;">IA en el Negocio</h3>
-                    <a href="articulo2.html" class="btn-link">Leer Artículo</a>
+                    <span class="tag">Inteligencia Artificial</span>
+                    <h3>IA Generativa en el SOC</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">El uso de modelos de lenguaje para la detección temprana de intrusos.</p>
+                    <a href="articulo2.html" class="btn-action">Explorar IA</a>
                 </div>
             </article>
 
@@ -191,33 +187,55 @@
                 <img src="img/hero2-img-2.png">
                 <div class="card-body">
                     <span class="tag">Infraestructura</span>
-                    <h3 style="margin:0;">SOC y NOC Operativo</h3>
-                    <a href="articulo3.html" class="btn-link">Leer Artículo</a>
+                    <h3>Arquitectura Zero Trust</h3>
+                    <p style="color: var(--text-dim); font-size: 0.9rem;">Nunca confiar, siempre verificar: el nuevo estándar del NOC.</p>
+                    <a href="articulo3.html" class="btn-action">Ver Detalles</a>
                 </div>
             </article>
         </div>
+    </section>
 
-        <section class="stats-box">
-            <div class="stat-item"><h3>99.9%</h3><p>Uptime NOC</p></div>
-            <div class="stat-item"><h3>15ms</h3><p>Latencia</p></div>
-            <div class="stat-item"><h3>24/7</h3><p>Seguridad SOC</p></div>
-            <div class="stat-item"><h3>+500</h3><p>Procesos RPA</p></div>
-        </section>
-
-        <h2 style="margin-bottom: 30px; font-size: 1.5rem;">Recursos de Capacitación</h2>
-        <div class="video-grid">
-            <div class="video-card">
-                <h4 style="margin:0 0 10px 0;">¿Qué es un SOC?</h4>
-                <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 15px;">Entiende la vigilancia de seguridad 24/7.</p>
-                <a href="https://www.youtube.com/watch?v=DAsg6rX3Wv8" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-size: 0.85rem; font-weight: bold;">Ver Video →</a>
+    <section class="section-container" style="background: #0e101a;">
+        <h2 class="section-title">Voces de la Industria: Entrevistas CISO</h2>
+        <div class="grid">
+            <div class="card" style="border: 1px solid #0066ff55;">
+                <div class="card-body">
+                    <span class="tag">Entrevista Exclusiva</span>
+                    <h3>Protección de Datos: La Prioridad del CEO</h3>
+                    <p>Hablamos con el Director de Seguridad sobre por qué la privacidad es el activo más valioso de las empresas modernas.</p>
+                    <a href="articulo1.html" class="btn-action">Ver Entrevista</a>
+                </div>
             </div>
-            <div class="video-card">
-                <h4 style="margin:0 0 10px 0;">IA Generativa</h4>
-                <p style="font-size: 0.85rem; color: var(--text-dim); margin-bottom: 15px;">Aplicación de modelos en el mundo real.</p>
-                <a href="https://www.youtube.com/watch?v=ad79nYk2keg" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-size: 0.85rem; font-weight: bold;">Ver Video →</a>
+            <div class="card" style="border: 1px solid #0066ff55;">
+                <div class="card-body">
+                    <span class="tag">Liderazgo</span>
+                    <h3>El Futuro de la IA en Ciberseguridad</h3>
+                    <p>Entrevista con jefes de innovación sobre la automatización de la defensa digital mediante algoritmos predictivos.</p>
+                    <a href="articulo2.html" class="btn-action">Leer más</a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="section-container">
+        <h2 class="section-title">Capacitación en Video</h2>
+        <div class="grid">
+            <div class="card">
+                <div style="padding:20px;">
+                    <h4 style="margin:0;">¿Qué es un SOC?</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">Entiende el funcionamiento de un centro de operaciones de seguridad.</p>
+                    <a href="https://www.youtube.com/watch?v=DAsg6rX3Wv8" target="_blank" style="color:var(--accent-blue); text-decoration:none; font-weight:bold;">Ver en YouTube →</a>
+                </div>
+            </div>
+            <div class="card">
+                <div style="padding:20px;">
+                    <h4 style="margin:0;">Importancia de los Datos</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-dim);">La importancia legal y ética de la protección de datos personales.</p>
+                    <a href="https://www.youtube.com/watch?v=ad79nYk2keg" target="_blank" style="color:var(--accent-blue); text-decoration:none; font-weight:bold;">Ver en YouTube →</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         &copy; 2026 B drive | Impulsando la transformación tecnológica.
