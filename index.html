@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B drive | Insights & Tech Blog</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>B drive | Impulsando la transformación tecnológica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #0a0b10;
@@ -12,24 +12,24 @@
             --accent-blue: #0066ff;
             --text-main: #ffffff;
             --text-dim: #a0a0a0;
-            --gradient: linear-gradient(135deg, #0a0b10 0%, #161826 100%);
+            --text-bright: #ffffff;
         }
 
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif; /* Usamos Montserrat para todo */
             margin: 0;
-            line-height: 1.6;
+            line-height: 1.5; /* Altura de línea más ajustada para el Hero */
         }
 
+        /* Navegación - Estilo Original Simple */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 8%;
-            background: rgba(10, 11, 16, 0.95);
-            border-bottom: 1px solid #222;
+            padding: 20px 8%;
+            background: rgba(10, 11, 16, 0.98);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -37,41 +37,58 @@
 
         .logo img { height: 35px; }
 
-        .menu a {
-            color: var(--text-main);
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 14px;
-            font-weight: 500;
+        /* Icono de menú tipo "hamburguesa" de la original */
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+        }
+        .menu-icon span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--text-main);
         }
 
-        .hero {
-            height: 35vh;
+        /* Hero Section - CLON IDÉNTICO */
+        .hero-original {
+            min-height: 80vh; /* Ocupa la mayor parte de la pantalla */
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: var(--gradient);
-            border-bottom: 1px solid #1a1c2e;
-            padding: 20px;
+            align-items: flex-start; /* Alineación a la izquierda */
+            text-align: left;
+            padding: 0 8% 60px; /* Padding lateral como la original */
+            background-color: var(--bg-dark);
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
+        /* Texto grande y Copy exacto */
+        .hero-original h1 {
+            font-size: 4rem; /* Texto muy grande */
+            font-weight: 700; /* Negrita */
+            margin: 0 0 30px;
+            color: var(--text-bright);
+            letter-spacing: -1px;
+        }
+
+        /* El copy exacto en texto normal */
+        .hero-original p {
+            font-size: 1.1rem;
+            color: var(--text-bright);
+            max-width: 650px;
             margin: 0;
-            background: linear-gradient(90deg, #fff, var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            opacity: 0.9;
         }
 
+        /* Grid de Artículos - Mantenemos tu Blog */
         .container {
-            max-width: 1100px;
-            margin: -40px auto 50px;
+            max-width: 1200px;
+            margin: 50px auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
         .card {
@@ -89,11 +106,11 @@
 
         .card-img {
             width: 100%;
-            height: 180px;
+            height: 190px;
             object-fit: cover;
         }
 
-        .card-body { padding: 20px; }
+        .card-body { padding: 25px; }
 
         .tag {
             font-size: 10px;
@@ -101,9 +118,8 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-family: 'Inter', sans-serif; /* Mantenemos Inter para tags */
         }
-
-        .card h3 { margin: 10px 0; font-size: 1.2rem; }
 
         .btn-link {
             display: inline-block;
@@ -111,114 +127,103 @@
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 600;
-            padding: 8px 16px;
+            padding: 10px 20px;
             border: 1px solid var(--accent-blue);
             border-radius: 4px;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-family: 'Inter', sans-serif;
         }
 
         .btn-link:hover { background: var(--accent-blue); }
 
-        footer { text-align: center; padding: 40px; color: #444; font-size: 0.8rem; }
+        /* Secciones Extra - Mantenemos tus añadidos */
+        .stats-box {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            background: linear-gradient(90deg, #11121d, #0a0b10);
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #1f2133;
+        }
+
+        .video-grid {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        footer { text-align: center; padding: 60px; color: #444; font-size: 0.8rem; border-top: 1px solid #1a1c2e; }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="logo"><img src="img/logo.png" alt="B drive"></div>
-        <div class="menu">
-            <a href="index.html">Inicio</a>
-            <a href="#" style="color: var(--accent-blue);">Blog</a>
+        <div class="menu-icon">
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
-    <header class="hero">
-        <h1>B drive Tech Insights</h1>
-        <p style="color: var(--text-dim);">Contenido exclusivo sobre Ciberseguridad e IA.</p>
+    <header class="hero-original">
+        <h1>Impulsando la transformación tecnológica</h1>
+        <p>Diseñamos, implementamos y gestionamos soluciones tecnológicas que impulsan la innovación, el crecimiento de tu organización y hacen posible lo imposible.</p>
     </header>
 
-    <main class="container">
-        
-        <article class="card">
-            <img src="img/about.png" class="card-img">
-            <div class="card-body">
-                <span class="tag">Ciberseguridad</span>
-                <h3>Blindaje de Datos</h3>
-                <p style="color: var(--text-dim); font-size: 0.9rem;">Entrevista sobre el desarrollo seguro y prevención de amenazas.</p>
-                <a href="articulo1.html" class="btn-link">Leer Artículo</a>
-            </div>
-        </article>
+    <section style="background:linear-gradient(180deg, #0a0b10 0%, #161826 100%); padding: 50px 0;">
+        <h2 style="text-align:center; color: var(--text-bright); font-size: 2rem; margin-bottom: 20px;">Insights del Centro de Innovación</h2>
+        <main class="container">
+            
+            <article class="card">
+                <img src="img/about.png" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Ciberseguridad</span>
+                    <h3>Blindaje de Datos</h3>
+                    <a href="articulo1.html" class="btn-link">Leer Artículo</a>
+                </div>
+            </article>
 
-        <article class="card">
-            <img src="img/hero2-img.png" class="card-img">
-            <div class="card-body">
-                <span class="tag">IA & Analítica</span>
-                <h3>IA en el Negocio</h3>
-                <p style="color: var(--text-dim); font-size: 0.9rem;">Cómo la inteligencia aplicada optimiza la toma de decisiones.</p>
-                <a href="articulo2.html" class="btn-link">Leer Artículo</a>
-            </div>
-        </article>
+            <article class="card">
+                <img src="img/hero2-img.png" class="card-img">
+                <div class="card-body">
+                    <span class="tag">IA & Analítica</span>
+                    <h3>IA en el Negocio</h3>
+                    <a href="articulo2.html" class="btn-link">Leer Artículo</a>
+                </div>
+            </article>
 
-        <article class="card">
-            <img src="img/hero2-img-2.png" class="card-img">
-            <div class="card-body">
-                <span class="tag">Infraestructura</span>
-                <h3>SOC y NOC: Vigilancia</h3>
-                <p style="color: var(--text-dim); font-size: 0.9rem;">Entiende la diferencia entre monitoreo y seguridad 24/7.</p>
-                <a href="articulo3.html" class="btn-link">Leer Artículo</a>
-            </div>
-        </article>
+            <article class="card">
+                <img src="img/hero2-img-2.png" class="card-img">
+                <div class="card-body">
+                    <span class="tag">Infraestructura</span>
+                    <h3>Monitoreo SOC/NOC</h3>
+                    <a href="articulo3.html" class="btn-link">Leer Artículo</a>
+                </div>
+            </article>
 
-        <article class="card">
-            <img src="img/hero2-img-2.png" class="card-img" style="filter: hue-rotate(90deg);">
-            <div class="card-body">
-                <span class="tag">Cloud Computing</span>
-                <h3>Estrategias en la Nube</h3>
-                <p style="color: var(--text-dim); font-size: 0.9rem;">Implementaciones eficientes para la transformación digital.</p>
-                <a href="articulo4.html" class="btn-link">Leer Artículo</a>
-            </div>
-        </article>
+        </main>
+    </section>
 
-    </main>
-<section style="max-width: 1100px; margin: 50px auto; padding: 40px 20px; background: linear-gradient(90deg, #11121d, #0a0b10); border-radius: 15px; text-align: center; border: 1px solid #1f2133;">
-        <h2 style="color: #0066ff; margin-bottom: 30px; font-family: 'Inter', sans-serif;">Impacto Operativo 2026</h2>
+    <section class="stats-box">
+        <h2 style="color: var(--accent-blue); margin-bottom: 30px;">Impacto Operativo 2026</h2>
         <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
-            <div style="flex: 1; min-width: 150px;">
-                <h3 style="font-size: 2.5rem; margin: 0; color: #fff;">99.9%</h3>
-                <p style="color: #a0a0a0; font-size: 0.8rem; text-transform: uppercase;">Disponibilidad NOC</p>
+            <div>
+                <h3 style="font-size: 2.5rem; margin: 0;">99.9%</h3>
+                <p style="color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase;">Uptime NOC</p>
             </div>
-            <div style="flex: 1; min-width: 150px;">
-                <h3 style="font-size: 2.5rem; margin: 0; color: #fff;">15ms</h3>
-                <p style="color: #a0a0a0; font-size: 0.8rem; text-transform: uppercase;">Latencia Red</p>
-            </div>
-            <div style="flex: 1; min-width: 150px;">
-                <h3 style="font-size: 2.5rem; margin: 0; color: #fff;">24/7</h3>
-                <p style="color: #a0a0a0; font-size: 0.8rem; text-transform: uppercase;">Vigilancia SOC</p>
-            </div>
-            <div style="flex: 1; min-width: 150px;">
-                <h3 style="font-size: 2.5rem; margin: 0; color: #fff;">+500</h3>
-                <p style="color: #a0a0a0; font-size: 0.8rem; text-transform: uppercase;">Bots RPA</p>
+            <div>
+                <h3 style="font-size: 2.5rem; margin: 0;">24/7</h3>
+                <p style="color: var(--text-dim); font-size: 0.8rem; text-transform: uppercase;">Seguridad SOC</p>
             </div>
         </div>
     </section>
 
-    <section style="max-width: 1100px; margin: 50px auto; padding: 0 20px;">
-        <h2 style="font-size: 1.5rem; border-left: 4px solid #0066ff; padding-left: 15px; margin-bottom: 30px; color: #fff; font-family: 'Inter', sans-serif;">Recursos de Capacitación</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-            <div style="background: #11121d; padding: 20px; border-radius: 10px; border: 1px solid #1f2133;">
-                <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">¿Qué es un SOC?</p>
-                <p style="font-size: 0.85rem; color: #a0a0a0; margin-bottom: 15px;">Guía fundamental para entender la seguridad operativa en la empresa.</p>
-                <a href="https://www.youtube.com/watch?v=DAsg6rX3Wv8" target="_blank" style="color: #0066ff; text-decoration: none; font-size: 0.85rem; font-weight: bold;">Ver Video en YouTube →</a>
-            </div>
-            <div style="background: #11121d; padding: 20px; border-radius: 10px; border: 1px solid #1f2133;">
-                <p style="font-weight: bold; margin-bottom: 10px; color: #fff;">IA Generativa Aplicada</p>
-                <p style="font-size: 0.85rem; color: #a0a0a0; margin-bottom: 15px;">Cómo la inteligencia artificial optimiza nuestros tableros de control.</p>
-                <a href="https://www.youtube.com/watch?v=ad79nYk2keg" target="_blank" style="color: #0066ff; text-decoration: none; font-size: 0.85rem; font-weight: bold;">Ver Video en YouTube →</a>
-            </div>
-        </div>
-    </section>
     <footer>
-        &copy; 2026 B drive | Centro de Capacitación Interna.
+        &copy; 2026 B drive | Centro de Capacitación Tecnológica.
     </footer>
 
 </body>
