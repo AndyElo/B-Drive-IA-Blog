@@ -23,7 +23,6 @@
             line-height: 1.6;
         }
 
-        /* Header Estilo B drive */
         nav {
             display: flex;
             justify-content: space-between;
@@ -36,9 +35,7 @@
             z-index: 1000;
         }
 
-        .logo img {
-            height: 35px;
-        }
+        .logo img { height: 35px; }
 
         .menu a {
             color: var(--text-main);
@@ -46,16 +43,10 @@
             margin-left: 25px;
             font-size: 14px;
             font-weight: 500;
-            transition: 0.3s;
         }
 
-        .menu a:hover {
-            color: var(--accent-blue);
-        }
-
-        /* Hero Section */
         .hero {
-            height: 40vh;
+            height: 35vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -63,6 +54,7 @@
             text-align: center;
             background: var(--gradient);
             border-bottom: 1px solid #1a1c2e;
+            padding: 20px;
         }
 
         .hero h1 {
@@ -73,18 +65,12 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .hero p {
-            color: var(--text-dim);
-            max-width: 600px;
-        }
-
-        /* Grid de Artículos */
         .container {
             max-width: 1100px;
-            margin: -50px auto 50px;
+            margin: -40px auto 50px;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
@@ -93,44 +79,31 @@
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid #1f2133;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
 
         .card:hover {
             transform: translateY(-8px);
             border-color: var(--accent-blue);
-            box-shadow: 0 10px 30px rgba(0, 102, 255, 0.1);
         }
 
         .card-img {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
-            filter: brightness(0.8);
         }
 
-        .card-body {
-            padding: 25px;
-        }
+        .card-body { padding: 20px; }
 
         .tag {
-            font-size: 11px;
-            text-transform: uppercase;
+            font-size: 10px;
             color: var(--accent-blue);
             font-weight: 700;
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .card h3 {
-            margin: 10px 0;
-            font-size: 1.25rem;
-        }
-
-        .card p {
-            font-size: 0.9rem;
-            color: var(--text-dim);
-            margin-bottom: 20px;
-        }
+        .card h3 { margin: 10px 0; font-size: 1.2rem; }
 
         .btn-link {
             display: inline-block;
@@ -141,77 +114,75 @@
             padding: 8px 16px;
             border: 1px solid var(--accent-blue);
             border-radius: 4px;
-            transition: 0.3s;
+            margin-top: 10px;
         }
 
-        .btn-link:hover {
-            background: var(--accent-blue);
-        }
+        .btn-link:hover { background: var(--accent-blue); }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #444;
-            font-size: 0.8rem;
-            border-top: 1px solid #1a1c2e;
-        }
+        footer { text-align: center; padding: 40px; color: #444; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">
-            <img src="img/logo.png" alt="B drive">
-        </div>
+        <div class="logo"><img src="img/logo.png" alt="B drive"></div>
         <div class="menu">
-            <a href="#">Inicio</a>
-            <a href="#">Nosotros</a>
-            <a href="#" style="border-bottom: 2px solid var(--accent-blue);">Blog</a>
+            <a href="index.html">Inicio</a>
+            <a href="#" style="color: var(--accent-blue);">Blog</a>
         </div>
     </nav>
 
     <header class="hero">
         <h1>B drive Tech Insights</h1>
-        <p>Explora las últimas tendencias en infraestructura, seguridad de datos e inteligencia aplicada.</p>
+        <p style="color: var(--text-dim);">Contenido exclusivo sobre Ciberseguridad e IA.</p>
     </header>
 
     <main class="container">
         
         <article class="card">
-            <img src="img/about.png" alt="Ciberseguridad" class="card-img">
+            <img src="img/about.png" class="card-img">
             <div class="card-body">
                 <span class="tag">Ciberseguridad</span>
-                <h3>Blindaje de Datos: Más allá del Firewall</h3>
-                <p>Análisis profundo sobre las nuevas amenazas y cómo el desarrollo seguro previene vulnerabilidades críticas.</p>
-                <a href="https://www.youtube.com/watch?v=bVfC6Z2F-X0" target="_blank" class="btn-link">Ver Explicación</a>
+                <h3>Blindaje de Datos</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Entrevista sobre el desarrollo seguro y prevención de amenazas.</p>
+                <a href="articulo1.html" class="btn-link">Leer Artículo</a>
             </div>
         </article>
 
         <article class="card">
-            <img src="img/hero2-img.png" alt="Inteligencia Artificial" class="card-img">
+            <img src="img/hero2-img.png" class="card-img">
             <div class="card-body">
                 <span class="tag">IA & Analítica</span>
-                <h3>IA: El Cerebro Detrás de la Eficiencia</h3>
-                <p>¿Cómo la inteligencia artificial está transformando los dashboards de control en herramientas predictivas?</p>
-                <a href="https://www.youtube.com/watch?v=ad79nYk2keg" target="_blank" class="btn-link">Conocer más</a>
+                <h3>IA en el Negocio</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Cómo la inteligencia aplicada optimiza la toma de decisiones.</p>
+                <a href="articulo2.html" class="btn-link">Leer Artículo</a>
             </div>
         </article>
 
         <article class="card">
-            <img src="img/hero2-img-2.png" alt="NOC SOC" class="card-img">
+            <img src="img/hero2-img-2.png" class="card-img">
             <div class="card-body">
                 <span class="tag">Infraestructura</span>
-                <h3>SOC y NOC: Vigilancia 24/7</h3>
-                <p>Conoce la diferencia operativa entre el monitoreo de red y el centro de operaciones de seguridad de B drive.</p>
-                <a href="https://www.youtube.com/watch?v=DAsg6rX3Wv8" target="_blank" class="btn-link">Ver Recorrido</a>
+                <h3>SOC y NOC: Vigilancia</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Entiende la diferencia entre monitoreo y seguridad 24/7.</p>
+                <a href="articulo3.html" class="btn-link">Leer Artículo</a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="img/hero2-img-2.png" class="card-img" style="filter: hue-rotate(90deg);">
+            <div class="card-body">
+                <span class="tag">Cloud Computing</span>
+                <h3>Estrategias en la Nube</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem;">Implementaciones eficientes para la transformación digital.</p>
+                <a href="articulo4.html" class="btn-link">Leer Artículo</a>
             </div>
         </article>
 
     </main>
 
     <footer>
-        © 2026 B drive | Centro de Transformación Digital. <br>
-        Contenido exclusivo para fines informativos y de capacitación.
+        &copy; 2026 B drive | Centro de Capacitación Interna.
     </footer>
 
 </body>
