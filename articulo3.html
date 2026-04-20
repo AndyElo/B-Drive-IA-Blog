@@ -3,38 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquitectura Zero Trust | B drive Insights</title>
+    <title>Arquitectura Zero Trust | B drive</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
         body { background: #0a0b10; color: white; font-family: 'Montserrat', sans-serif; padding: 5% 10%; line-height: 1.8; margin: 0; }
         .tag { color: #0066ff; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
         h1 { font-size: 3.5rem; font-weight: 800; margin: 10px 0; line-height: 1.1; }
         .accent { color: #0066ff; }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 40px 0; border-radius: 15px; overflow: hidden; border: 1px solid #1a1c2e; }
+        .back-btn { color: #0066ff; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; margin-bottom: 20px; }
+        .back-btn:hover { color: #fff; transform: translateX(-5px); }
+        
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 40px 0; border-radius: 15px; overflow: hidden; border: 1px solid #1a1c2e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
-        .back-btn { color: #0066ff; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; }
-        .back-btn:hover { color: #fff; }
-        .info-card { background: #11121d; border-left: 5px solid #0066ff; padding: 25px; border-radius: 5px; margin: 30px 0; }
+        
+        .section-box { background: #11121d; border: 1px solid #1f2133; padding: 35px; border-radius: 15px; margin: 30px 0; }
+        .pilares-list { list-style: none; padding: 0; }
+        .pilares-list li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .pilares-list li::before { content: "✔"; color: #0066ff; position: absolute; left: 0; font-weight: bold; }
+        
+        h2 { color: #0066ff; border-bottom: 2px solid #1f2133; padding-bottom: 10px; margin-top: 40px; }
+        .highlight-text { border-left: 4px solid #0066ff; padding-left: 20px; font-style: italic; color: #cfd1d8; }
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-btn">← Volver al Blog</a>
-    <br><br>
+    <a href="index.html" class="back-btn">← Regresar al Blog</a>
+    <br>
     <span class="tag">Infraestructura Crítica</span>
     <h1>Arquitectura <span class="accent">Zero Trust</span></h1>
     
-    <p>El concepto de <strong>Zero Trust</strong> (Confianza Cero) se basa en un principio simple pero radical: <em>"Nunca confiar, siempre verificar"</em>. En la infraestructura moderna, ya no existe una "red interna segura". Cada dispositivo y usuario debe ser autenticado rigurosamente.</p>
+    <p class="highlight-text">"Nunca confiar, siempre verificar". El perímetro tradicional ha muerto. Hoy, la infraestructura debe ser capaz de autenticar cada solicitud de acceso, sin importar si viene de dentro o fuera de la oficina.</p>
 
-    <div class="info-card">
-        <h3>¿Por qué es el estándar del NOC?</h3>
-        <p>Con el trabajo remoto y la nube, el perímetro desapareció. Zero Trust protege los activos de <strong>B drive</strong> asegurando que solo las personas correctas tengan acceso a los datos correctos en el momento correcto, reduciendo drásticamente la superficie de ataque.</p>
+    <h2>Impacto en las Organizaciones Modernas</h2>
+    <p>En el panorama actual de 2026, las empresas ya no operan en una red local segura. La adopción de la nube y el trabajo híbrido han hecho que el firewall tradicional sea insuficiente. Implementar una arquitectura <strong>Zero Trust</strong> permite a las organizaciones:</p>
+    
+    <div class="section-box">
+        <ul class="pilares-list">
+            <li><strong>Eliminar la Confianza Implícita:</strong> Ningún usuario o dispositivo es confiable por el simple hecho de estar "dentro" de la red corporativa.</li>
+            <li><strong>Visibilidad Total del Tráfico:</strong> Monitoreo constante de quién accede a qué, desde dónde y en qué dispositivo.</li>
+            <li><strong>Reducción del Radio de Explosión:</strong> Mediante la micro-segmentación, si una cuenta es comprometida, el atacante no puede moverse lateralmente por toda la empresa.</li>
+            <li><strong>Seguridad Adaptativa:</strong> El acceso se concede o deniega basándose en el riesgo en tiempo real (ubicación, hora, estado del dispositivo).</li>
+        </ul>
     </div>
 
+    <h2>Video Informativo: Implementación de Confianza Cero</h2>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/6s1j4eI4B60" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/qb-M8VpMx2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
-    <h3>Estrategias de Implementación:</h3>
-    <p>Implementar Zero Trust requiere micro-segmentación de red, autenticación multifactor (MFA) y un monitoreo continuo del comportamiento del usuario. Es el pilar fundamental para cualquier empresa que busque resiliencia en 2026.</p>
+    <h2>El Nuevo Estándar del NOC</h2>
+    <p>La importancia de la protección de datos en la infraestructura radica en la resiliencia operativa. No se trata de evitar el ataque al 100%, sino de asegurar que, cuando ocurra, el impacto sea mínimo y el negocio siga operando. En <strong>B drive</strong>, diseñamos infraestructuras bajo este estándar para garantizar que el crecimiento de tu organización no se vea frenado por brechas de seguridad.</p>
+
 </body>
 </html>
