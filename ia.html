@@ -3,122 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA & Ciberseguridad | B drive Insights</title>
+    <title>IA Generativa en el SOC | B drive</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-dark: #0a0b10;
-            --card-bg: #11121d;
-            --accent-blue: #0066ff;
-            --text-dim: #a0a0a0;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            line-height: 1.7;
-        }
-
-        nav {
-            padding: 20px 8%;
-            border-bottom: 1px solid #1a1c2e;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .back-link { color: var(--accent-blue); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
-
-        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-
-        .header-content { border-bottom: 1px solid #1a1c2e; padding-bottom: 40px; margin-bottom: 40px; }
-        
-        h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
-        
-        .tag-ia { color: var(--accent-blue); text-transform: uppercase; font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Ratio 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 15px;
-            background: #000;
-            margin: 40px 0;
-            border: 1px solid #1a1c2e;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .interview-section {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 15px;
-            border-left: 5px solid var(--accent-blue);
-            margin-top: 50px;
-        }
-
-        .question { color: var(--accent-blue); font-weight: 700; margin-top: 25px; display: block; }
-        
-        .author-box { display: flex; align-items: center; gap: 15px; margin-top: 30px; padding-top: 20px; border-top: 1px solid #1a1c2e; }
-        .author-img { width: 50px; height: 50px; border-radius: 50%; background: #333; }
-
-        footer { text-align: center; padding: 60px; color: #444; font-size: 0.8rem; }
+        body { background: #0a0b10; color: white; font-family: 'Montserrat', sans-serif; padding: 5% 10%; line-height: 1.8; margin: 0; }
+        .tag { color: #0066ff; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        h1 { font-size: 3.5rem; font-weight: 800; margin: 10px 0; line-height: 1.2; color: #ffffff; }
+        .highlight { color: #0066ff; }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; margin: 40px 0; border-radius: 15px; overflow: hidden; border: 1px solid #1a1c2e; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .back { color: #0066ff; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; margin-bottom: 20px; }
+        .back:hover { transform: translateX(-5px); color: #fff; }
+        .content-box { background: #11121d; padding: 30px; border-radius: 15px; border: 1px solid #1f2133; margin: 30px 0; }
+        h3 { color: #0066ff; }
     </style>
 </head>
 <body>
+    <a href="index.html" class="back">← Regresar al Inicio</a>
+    <br>
+    <span class="tag">Innovación Inteligente</span>
+    <h1>IA Generativa en el <span class="highlight">SOC</span></h1>
+    
+    <p>La integración de la <strong>IA Generativa</strong> en el Centro de Operaciones de Seguridad (SOC) marca un antes y un después en la defensa digital. Ya no dependemos únicamente de reglas estáticas; ahora, los modelos de lenguaje analizan trillones de eventos para identificar patrones sospechosos en milisegundos.</p>
 
-    <nav>
-        <a href="index.html" class="back-link">← Volver al Blog</a>
-        <div class="logo-small" style="font-weight: 800; letter-spacing: -1px;">B drive <span style="color:var(--accent-blue)">.</span></div>
-    </nav>
+    <div class="content-box">
+        <h3>Beneficios de la IA en Ciberseguridad:</h3>
+        <ul>
+            <li><strong>Análisis Predictivo:</strong> Anticipación de vectores de ataque antes de que se ejecuten.</li>
+            <li><strong>Automatización de Respuestas:</strong> Bloqueo instantáneo de IPs maliciosas detectadas por comportamiento.</li>
+            <li><strong>Reducción de Falsos Positivos:</strong> Mayor precisión para que los analistas se enfoquen en amenazas reales.</li>
+        </ul>
+    </div>
 
-    <article class="container">
-        <div class="header-content">
-            <span class="tag-ia">Inteligencia Artificial & Privacidad</span>
-            <h1>El impacto de la IA en la Protección de Datos Modernos</h1>
-            <p style="font-size: 1.2rem; color: var(--text-dim);">Analizamos cómo la IA generativa está redefiniendo los perímetros de seguridad y la importancia de la ética en el manejo de información sensible.</p>
-        </div>
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/9jd_oxOU5ME" allowfullscreen></iframe>
+    </div>
 
-        <section class="main-text">
-            <p>La integración de la Inteligencia Artificial en las organizaciones no es solo una ventaja competitiva, es un cambio de paradigma en la defensa digital. Sin embargo, con el gran poder de procesamiento viene el reto de la <strong>soberanía de los datos</strong>.</p>
-            
-            <h3>Análisis en Video: IA y Ciberdefensa</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/ad79nYk2keg" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section class="interview-section">
-            <h2 style="margin-top: 0;">Entrevista Exclusiva</h2>
-            <p><em>Hablamos con el Director de Innovación Tecnológica sobre el futuro de los SOCs automatizados.</em></p>
-
-            <span class="question">¿Cómo está cambiando la IA el trabajo de un analista de seguridad?</span>
-            <p>"La IA no reemplaza al analista, le da superpoderes. Ahora podemos detectar patrones de ataque en milisegundos que antes tomaban horas de revisión manual en el log del sistema."</p>
-
-            <span class="question">¿Cuál es el mayor riesgo de la IA para la protección de datos?</span>
-            <p>"El 'Shadow AI'. Empleados subiendo datos corporativos sensibles a modelos públicos. La clave está en implementar modelos locales y cerrados dentro de nuestra infraestructura NOC/SOC."</p>
-
-            <div class="author-box">
-                <div class="author-img"></div>
-                <div>
-                    <strong style="display: block;">Director de Ciberseguridad</strong>
-                    <span style="font-size: 0.8rem; color: var(--text-dim);">B drive Tech Insights</span>
-                </div>
-            </div>
-        </section>
-    </article>
-
-    <footer>
-        &copy; 2026 B drive | Impulsando la transformación tecnológica.
-    </footer>
-
+    <p>En <strong>B drive</strong>, impulsamos esta transformación tecnológica para que la protección de datos sea proactiva, inteligente y escalable para cualquier organización.</p>
 </body>
 </html>
