@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html>
-<body style="background:#020617;color:white;padding:40px;font-family:sans-serif;max-width:900px;margin:auto;">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Trust: Seguridad sin Confianza | B drive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { background: #0a0b10; color: white; font-family: 'Montserrat', sans-serif; padding: 5% 10%; line-height: 1.8; margin: 0; }
+        .tag { color: #0066ff; font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+        h1 { font-size: 3.5rem; font-weight: 800; margin: 10px 0; line-height: 1.1; }
+        h2 { color: #0066ff; margin-top: 40px; border-bottom: 1px solid #1f2133; padding-bottom: 10px; }
+        .accent { color: #0066ff; }
+        
+        .back-btn { color: #0066ff; text-decoration: none; font-weight: bold; transition: 0.3s; display: inline-block; margin-bottom: 20px; }
+        .back-btn:hover { color: #fff; transform: translateX(-5px); }
+        
+        .grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+        .card { background: #11121d; border: 1px solid #1f2133; padding: 25px; border-radius: 15px; }
+        
+        .highlight-box { background: rgba(0, 102, 255, 0.1); border-left: 5px solid #0066ff; padding: 20px; border-radius: 5px; margin: 30px 0; font-style: italic; }
+        
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 40px 0; border-radius: 15px; overflow: hidden; border: 1px solid #1a1c2e; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        strong { color: #0066ff; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Volver al Blog</a>
+    <br>
+    <span class="tag">🔐 Ciberseguridad Estratégica</span>
+    <h1>Zero Trust: <span class="accent">Seguridad sin confianza implícita</span></h1>
 
-<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" style="width:100%;border-radius:10px;">
+    <div class="highlight-box">
+        "Nunca confiar, siempre verificar". El modelo Zero Trust redefine la seguridad tradicional asumiendo que ningún usuario o dispositivo es confiable por defecto, incluso dentro del perímetro corporativo.
+    </div>
 
-<h1>Cloud Security</h1>
+    <h2>⚙️ ¿Cómo funciona?</h2>
+    <p>Cada solicitud de acceso es evaluada en tiempo real considerando múltiples factores dinámicos:</p>
+    <div class="grid-container">
+        <div class="card">
+            <ul>
+                <li><strong>Identidad del usuario:</strong> Validación rigurosa de quién intenta acceder.</li>
+                <li><strong>Estado del dispositivo:</strong> ¿Está actualizado? ¿Tiene malware?</li>
+            </ul>
+        </div>
+        <div class="card">
+            <ul>
+                <li><strong>Ubicación:</strong> Análisis de geolocalización y red de origen.</li>
+                <li><strong>Nivel de riesgo:</strong> Comportamiento inusual del usuario.</li>
+            </ul>
+        </div>
+    </div>
 
-<p>Errores comunes en configuraciones cloud.</p>
+    <p>Además, se aplican controles críticos como <strong>MFA</strong> (Multi-Factor Authentication), el principio de <strong>mínimo privilegio</strong> y monitoreo continuo de todas las sesiones.</p>
+
+    <h2>🧠 ¿Por qué es importante?</h2>
+    <p>Hoy en día, los ataques ya no dependen solo de vulnerar redes, sino de robar credenciales válidas mediante <strong>phishing o vishing</strong>. Zero Trust reduce este riesgo al:</p>
+    <ul>
+        <li>Limitar accesos innecesarios a datos sensibles.</li>
+        <li>Detectar comportamientos anómalos automáticamente.</li>
+        <li>Bloquear accesos sospechosos en tiempo real.</li>
+    </ul>
+
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/qb-M8VpMx2w" allowfullscreen></iframe>
+    </div>
+
+    <h2>🧪 Enfoque práctico (Seguridad Ofensiva)</h2>
+    <p>Desde el punto de vista de <strong>pentesting</strong>, Zero Trust eleva el nivel técnico de las pruebas:</p>
+    <div class="card">
+        <p>Tener credenciales ya no garantiza el acceso total. Un atacante ahora debe enfrentarse a la necesidad de evadir:</p>
+        <ul>
+            <li>Tokens de MFA dinámicos.</li>
+            <li>Políticas condicionales de acceso.</li>
+            <li>Validación de certificados de dispositivo.</li>
+        </ul>
+    </div>
+
+    <h2>🚀 Conclusión</h2>
+    <p>Zero Trust no es una herramienta, sino una <strong>estrategia de seguridad moderna</strong>. Adoptarlo significa dejar atrás la confianza implícita y avanzar hacia un modelo robusto y alineado a las amenazas reales de 2026.</p>
 
 </body>
 </html>
