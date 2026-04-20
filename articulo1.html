@@ -5,32 +5,35 @@
     <title>Ciberseguridad | B drive Tech Insights</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        body { background: #0a0b10; color: white; font-family: 'Montserrat', sans-serif; padding: 5% 10%; line-height: 1.8; }
+        body { background: #0a0b10; color: white; font-family: 'Montserrat', sans-serif; padding: 5% 10%; line-height: 1.8; margin: 0; }
         .tag { color: #0066ff; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
         h1 { font-size: 3.5rem; font-weight: 800; margin: 10px 0 30px; line-height: 1.1; }
         .highlight { color: #0066ff; }
-        .video-box { margin: 40px 0; border-radius: 15px; overflow: hidden; border: 1px solid #1a1c2e; }
+        .video-box { margin: 40px 0; border-radius: 15px; overflow: hidden; border: 1px solid #1a1c2e; position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
         .interview { background: #11121d; padding: 30px; border-left: 4px solid #0066ff; border-radius: 0 15px 15px 0; margin: 40px 0; }
-        .back { color: #0066ff; text-decoration: none; font-weight: bold; display: block; margin-bottom: 20px; }
+        .back { color: #0066ff; text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 20px; transition: 0.3s; }
+        .back:hover { transform: translateX(-5px); }
     </style>
 </head>
 <body>
     <a href="index.html" class="back">← Regresar al Blog</a>
+    <br>
     <span class="tag">Ciberseguridad Avanzada</span>
     <h1>Estrategias de <span class="highlight">Blindaje</span> 2026</h1>
     
     <p>El blindaje de datos en 2026 ya no se trata de muros estáticos, sino de ecosistemas resilientes. Con el aumento de ataques dirigidos, las organizaciones deben migrar de una defensa reactiva a una postura de <strong>Caza de Amenazas (Threat Hunting)</strong>.</p>
 
     <div class="interview">
-        <h3>Entrevista con el CISO de B drive</h3>
-        <p><em>"La ciberseguridad es un proceso, no un producto. El 90% de los incidentes exitosos siguen siendo a través de ingeniería social; blindar la tecnología es inútil si no blindamos la conciencia de los colaboradores."</em></p>
+        <h3>Entrevista: Ciberseguridad y Protección de Datos</h3>
+        <p><em>"La protección de datos personales y corporativos es el activo más valioso. En esta era, blindar la tecnología es solo la mitad del trabajo; la otra mitad es la gestión inteligente de la identidad."</em></p>
+    </div>
+
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/6s1j4eI4B60" allowfullscreen></iframe>
     </div>
 
     <h3>La importancia del SOC 24/7</h3>
-    <p>Un Centro de Operaciones de Seguridad (SOC) monitorea cada paquete de datos que entra y sale de tu red. La protección de datos personales y corporativos es el activo más valioso en la economía digital actual.</p>
-
-<div class="video-box">
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/6s1j4eI4B60" frameborder="0" allowfullscreen></iframe>
-</div>
+    <p>Un Centro de Operaciones de Seguridad (SOC) monitorea cada paquete de datos. La visibilidad total es la única forma de garantizar que tu empresa sea un entorno seguro.</p>
 </body>
 </html>
