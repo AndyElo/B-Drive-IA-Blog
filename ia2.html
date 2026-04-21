@@ -17,10 +17,16 @@
         .question { color: #0066ff; font-weight: 700; font-size: 1.2rem; margin-top: 30px; display: block; }
         .answer { border-bottom: 1px solid #1f2133; padding-bottom: 20px; margin-bottom: 20px; color: #cfd1d8; }
         
+        /* Estilo para el hito de la certificación ISO */
+        .iso-announcement { background: rgba(0, 102, 255, 0.1); border: 1px solid #0066ff; padding: 30px; border-radius: 15px; margin: 40px 0; text-align: center; }
+        .iso-announcement h2 { color: #fff; margin-top: 0; font-size: 1.5rem; }
+        
         .prediction-card { background: linear-gradient(145deg, #11121d, #1a1c2e); border: 1px solid #0066ff; padding: 25px; border-radius: 15px; margin: 40px 0; }
         
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 40px 0; border-radius: 15px; overflow: hidden; border: 1px solid #1a1c2e; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; margin: 20px 0; border-radius: 15px; overflow: hidden; border: 1px solid #1a1c2e; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        
+        .footer-note { margin-top: 50px; border-top: 1px solid #1f2133; padding-top: 20px; font-style: italic; color: #888; }
     </style>
 </head>
 <body>
@@ -36,40 +42,47 @@
 
     <p>Hoy conversamos con los líderes de innovación de <strong>B drive</strong> sobre cómo la Inteligencia Artificial está dejando de ser una herramienta de apoyo para convertirse en el núcleo de la defensa digital operativa.</p>
 
-    <span class="question">¿Qué significa realmente "automatizar la defensa" en 2026?</span>
-    <p class="answer">Automatizar no es solo responder a un ataque, es predecirlo. Usamos modelos de lenguaje y redes neuronales para analizar el tráfico del SOC en tiempo real. La IA identifica micro-comportamientos que un analista humano tardaría horas en detectar, permitiendo que el sistema se autoproteja antes de que el atacante logre la persistencia.</p>
+    <div class="iso-announcement">
+        <span style="font-size: 2rem;">🏆</span>
+        <h2>SOMOS LA PRIMERA EMPRESA EN LATAM CON ISO 42001 IA</h2>
+        <p>En <strong>B Drive</strong>, empresa mexicana líder en infraestructura tecnológica crítica, anunciamos con orgullo la obtención de la <strong>Certificación ISO 42001</strong> en Gestión de Inteligencia Artificial otorgada por NYCE.</p>
+    </div>
 
-    <span class="question">¿Cómo cambian los algoritmos predictivos el panorama del pentesting?</span>
-    <p class="answer">El pentesting evoluciona hacia simulaciones continuas. Los algoritmos predictivos nos permiten modelar cómo atacaría un adversario específico basándose en tendencias globales del MITRE ATT&CK. Esto eleva el nivel de nuestras pruebas: ya no solo buscamos vulnerabilidades, probamos la capacidad de la IA para bloquear ataques de nueva generación.</p>
+    <span class="question">¿Qué significa realmente "automatizar la defensa" en 2026?</span>
+    <p class="answer">Automatizar no es solo responder a un ataque, es predecirlo. Usamos modelos de lenguaje y redes neuronales para analizar el tráfico del SOC en tiempo real. La IA identifica micro-comportamientos que un analista humano tardaría horas en detectar.</p>
 
     <div class="prediction-card">
         <h3>🚀 Predicciones Clave para el SOC:</h3>
         <ul>
-            <li><strong>Respuesta Autónoma:</strong> Los incidentes de baja criticidad serán resueltos al 100% por IA sin intervención humana.</li>
-            <li><strong>Modelado de Adversarios:</strong> La IA creará perfiles dinámicos de atacantes basados en técnicas de phishing y vishing detectadas.</li>
-            <li><strong>Blindaje en Tiempo Real:</strong> Reconfiguración automática de reglas de red ante patrones anómalos.</li>
+            <li><strong>Respuesta Autónoma:</strong> Incidentes de baja criticidad resueltos al 100% por IA.</li>
+            <li><strong>Modelado de Adversarios:</strong> Perfiles dinámicos basados en técnicas de phishing y vishing.</li>
+            <li><strong>Blindaje en Tiempo Real:</strong> Reconfiguración automática de reglas ante patrones anómalos.</li>
         </ul>
     </div>
 
-
-
     <h2>Análisis: IA y el Futuro Empresarial</h2>
-<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-    <iframe 
-        src="https://www.youtube.com/embed/5Izihr4BCbo" 
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
-</div>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/5Izihr4BCbo" 
+            title="Análisis IA Futuro" 
+            allowfullscreen>
+        </iframe>
+    </div>
     
-<span class="question">SOMOS LA PRIMERA EMPRESA EN LATAM CON ISO 40001 IA</span>
-    <span class="question">En B Drive, empresa mexicana líder en infraestructura tecnológica crítica, anunciamos con orgullo que obtuvimos la Certificación ISO 42001 en Gestión de Inteligencia Artificial (IA) otorgada por NYCE.</span>
-    <p class="answer">La "IA contra IA". Los atacantes también usan algoritmos para generar malware polimórfico. Por eso, en B drive nos enfocamos en que nuestra IA sea más rápida y precisa. El futuro de la ciberseguridad es una carrera de algoritmos.Nuestro objetivo es expandir nuestra IA que funciona a más de 100 clientes para 2026, manteniendo siempre nuestra infraestructura propia como la base de la seguridad y la continuidad.
+    <span class="question">¿Cuál es el mayor desafío en esta "Carrera de Algoritmos"?</span>
+    <p class="answer">Enfrentamos la "IA contra IA". Los atacantes usan algoritmos para generar malware polimórfico; por ello, en <strong>B drive</strong> nos enfocamos en que nuestra IA sea más rápida y precisa. Nuestro objetivo es expandir nuestra IA a más de 100 clientes para 2026, manteniendo nuestra infraestructura propia como base de seguridad.</p>
 
-Invitamos a las organizaciones a trabajar con la IA que ya está lista, segura y validada. </p>
+    <h2>Conoce nuestra Tribu: Innovación y Pasión</h2>
+    <p>La tecnología es el motor, pero el corazón es nuestra gente. Te invitamos a conocer más sobre la esencia de B-Drive IT y Engine Core.</p>
+    <div class="video-container">
+        <iframe 
+            src="https://www.youtube.com/embed/OuMHvZtOxp8" 
+            title="Somos Tribe - B-Drive IT" 
+            allowfullscreen>
+        </iframe>
+    </div>
 
-    <p><em>Gracias por acompañarnos en esta entrega de <strong>Tech Insights</strong>. La automatización es el escudo definitivo en un mundo hiperconectado.</em></p>
+    <p class="footer-note">Gracias por acompañarnos en esta entrega de <strong>Tech Insights</strong>. La automatización es el escudo definitivo en un mundo hiperconectado.</p>
 
 </body>
 </html>
